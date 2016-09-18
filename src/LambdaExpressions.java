@@ -40,5 +40,13 @@ public class LambdaExpressions {
         Comparator<Integer> comparator2 = (Integer o1, Integer o2) -> o1 < o2 ? -1 : (o1 > o2 ? 1 : 0);
         //the same
         Comparator<Integer> comparator3 = (o1, o2) -> o1 < o2 ? -1 : (o1 > o2 ? 1 : 0);
+
+        //if method doesn't accept any parameters,
+        //we just leave empty brackets
+        Runnable r = () -> {
+            for (int i = 0; i < 5; i++) {
+                System.out.println(i);
+            }
+        };
     }
 }
